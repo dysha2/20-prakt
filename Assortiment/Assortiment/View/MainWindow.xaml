@@ -22,8 +22,8 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="Таблицы">
-                <MenuItem Header="Поставщик" Command="{Binding ChangeConrtol}" CommandParameter="{Binding ProviderVM}"/>
-                <MenuItem Header="Товар" Command="{Binding ChangeConrtol}" CommandParameter="{Binding BrandVM}"/>
+                <MenuItem Header="Поставщик" Command="{Binding ChangeControl}" CommandParameter="{Binding ProviderVM}"/>
+                <MenuItem Header="Товар" Command="{Binding ChangeControl}" CommandParameter="{Binding BrandVM}"/>
                 <MenuItem Header="Бренд"/>
             </MenuItem>
         </Menu>
@@ -32,8 +32,6 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            
-            <!--<controls:ListItemsControl/>-->
             <ContentControl Content="{Binding CurrentContentVM,UpdateSourceTrigger=PropertyChanged}"/>
         </Grid>
     </DockPanel>

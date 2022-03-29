@@ -21,7 +21,7 @@ namespace Assortiment.ViewModel
         {
             ProviderVM = new ProviderVM();
             BrandVM = new BrandVM();
-            CurrentContentVM=BrandVM;
+            CurrentContentVM=ProviderVM;
             root = this;
         }
         #region Fields
@@ -44,13 +44,13 @@ namespace Assortiment.ViewModel
         #endregion
         #region Commands
 
-        public DelegateCommand<BindableBase> ChangeConrtol
+        public DelegateCommand<BindableBase> ChangeControl
         {
             get
             {
                 return new DelegateCommand<BindableBase>(obj =>
                 {
-                    currentContentVM = obj;
+                    CurrentContentVM = obj;
                 });
             }
         }
